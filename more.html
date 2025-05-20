@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Portfolio - More</title>
+  
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+  
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background-image: url("background3.jpg");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      color: aqua;
+      min-height: 100vh;
+      padding-top: 70px; 
+    }
+
+    @media (max-width: 600px) {
+      body {
+        background-attachment: scroll;
+        padding-top: 60px;
+      }
+    }
+
+    nav.navbar {
+      background: rgba(0, 0, 0, 0.75);
+      backdrop-filter: saturate(180%) blur(10px);
+      box-shadow: 0 4px 10px rgba(0, 255, 255, 0.4);
+      font-weight: 500;
+    }
+
+    .navbar-brand {
+      font-size: 1.875rem; 
+      font-weight: 600;
+      color: aqua !important;
+      user-select: none;
+      cursor: default;
+    }
+
+    .navbar-toggler {
+      border-color: aqua;
+      color: aqua;
+      font-size: 1.5rem;
+      outline: none;
+    }
+
+    .navbar-toggler-icon {
+      display: none;
+    }
+
+    .navbar-toggler > i {
+      color: aqua;
+      font-size: 1.8rem;
+    }
+
+    .navbar-nav .nav-link {
+      color: white !important;
+      font-size: 1.125rem;
+      margin-left: 1.25rem; 
+      transition: all 0.3s ease-in-out;
+      position: relative;
+      padding: 0.5rem 0;
+    }
+
+    .navbar-nav .nav-link:hover,
+    .navbar-nav .nav-link.active {
+      color: aqua !important;
+      transform: scale(1.05);
+      box-shadow: 0 0 10px aqua;
+      border-radius: 5px;
+      background-color: rgba(0, 255, 255, 0.1);
+    }
+
+    .container.main-container {
+      max-width: 1000px;
+      margin: 2rem auto 4rem;
+      background: rgba(0, 0, 0, 0.65);
+      padding: 2.5rem 2rem;
+      border-radius: 15px;
+      box-shadow: 0 0 20px aqua;
+      color: #9ef0f0;
+    }
+
+    h1, h2 {
+      text-align: center;
+      color: aqua;
+      margin-bottom: 2rem;
+      text-shadow: 0 0 8px aqua;
+    }
+
+    .about-me p {
+      font-size: 1.125rem; 
+      line-height: 1.6;
+      margin-bottom: 1.5rem;
+      text-align: center;
+      max-width: 650px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .hobbies {
+      display: flex;
+      justify-content: center;
+      gap: 2.5rem;
+      flex-wrap: wrap;
+      margin-bottom: 3rem;
+    }
+
+    .hobby-card {
+      background: rgba(0, 255, 255, 0.15);
+      border-radius: 12px;
+      padding: 1.25rem 1rem; 
+      width: 150px;
+      text-align: center;
+      box-shadow: 0 0 10px aqua;
+      transition: transform 0.3s ease;
+      cursor: default;
+      color: #b0f9f9;
+      font-weight: 600;
+      user-select: none;
+    }
+
+    .hobby-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 0 20px aqua;
+    }
+
+    .hobby-card i {
+      font-size: 2.5rem; 
+      margin-bottom: 0.75rem;
+      color: aqua;
+    }
+
+    .contact {
+      text-align: center;
+      font-size: 1.125rem;
+      margin-bottom: 2rem;
+    }
+
+    .contact a {
+      color: aqua;
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+
+    .contact a:hover {
+      color: #00ffff;
+      text-decoration: underline;
+    }
+
+    .social-links {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      margin-top: 1rem;
+    }
+
+    .social-links a {
+      color: aqua;
+      font-size: 1.75rem; 
+      transition: color 0.3s ease;
+    }
+
+    .social-links a:hover {
+      color: #00ffff;
+    }
+
+    @media(max-width: 768px) {
+      .navbar-nav .nav-link {
+        margin-left: 0.8rem;
+        font-size: 1rem;
+      }
+
+      .container.main-container {
+        padding: 2rem 1.5rem;
+        margin: 1.5rem 1rem 3rem;
+      }
+    }
+
+    @media(max-width: 600px) {
+      .hobbies {
+        gap: 1.25rem;
+      }
+
+      .hobby-card {
+        width: 120px;
+        padding: 1rem 0.75rem;
+        font-size: 0.9rem;
+      }
+
+      .hobby-card i {
+        font-size: 2rem;
+        margin-bottom: 0.5rem;
+      }
+
+      .navbar-brand {
+        font-size: 1.5rem;
+      }
+
+      .contact {
+        font-size: 1rem;
+      }
+
+      .social-links a {
+        font-size: 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg fixed-top">
+  <div class="container">
+    <a class="navbar-brand" href="#">Jesus.com</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <i class='bx bx-menu'></i>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="profile.html">Profile</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="skills.html">Skills</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " href="project.html">Project</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="more.html">More</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="container main-container">
+  <h1>More About Me</h1>
+
+  <section class="about-me">
+    <p>Hello! I'm Vandervelt, an IT student passionate about web design, game design, and graphic arts. I love creating clean and beautiful digital experiences that leave a lasting impression.</p>
+    <p>When I'm not coding or designing, I enjoy exploring new technologies, playing video games, and capturing moments through photography.</p>
+  </section>
+
+  <section class="hobbies" aria-label="Hobbies">
+    <div class="hobby-card" tabindex="0">
+      <i class='bx bx-palette'></i>
+      <p>Graphic Design</p>
+    </div>
+    <div class="hobby-card" tabindex="0">
+      <i class='bx bx-game'></i>
+      <p>Game Design</p>
+    </div>
+    <div class="hobby-card" tabindex="0">
+      <i class='bx bx-code-alt'></i>
+      <p>Coding</p>
+    </div>
+    <div class="hobby-card" tabindex="0">
+      <i class='bx bx-camera'></i>
+      <p>Photography</p>
+    </div>
+    <div class="hobby-card" tabindex="0">
+      <i class='bx bx-book'></i>
+      <p>Reading</p>
+    </div>
+  </section>
+
+  <section class="contact">
+    <h2>Get In Touch</h2>
+    <p>Email me at <a href="mailto:jesus@example.com">jesusamenpraydaily@example.com</a></p>
+    <p>Or connect with me on social media:</p>
+
+    <div class="social-links">
+      <a href="#" title="Facebook" target="_blank" rel="noopener"><i class='bx bxl-facebook'></i></a>
+      <a href="#" title="Instagram" target="_blank" rel="noopener"><i class='bx bxl-instagram'></i></a>
+      <a href="#" title="LinkedIn" target="_blank" rel="noopener"><i class='bx bxl-linkedin'></i></a>
+      <a href="#" title="Twitter" target="_blank" rel="noopener"><i class='bx bxl-twitter'></i></a>
+    </div>
+  </section>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
